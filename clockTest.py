@@ -1,8 +1,15 @@
 import unittest
+from clock import Clock
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+
+class ClockTest(unittest.TestCase):
+
+    def setUp(self):
+        try:
+            self.clock = Clock()
+        except NameError as e:
+            raise NotImplementedError()
+
 
 if __name__ == '__main__':
     unittest.main()
